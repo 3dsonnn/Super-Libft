@@ -109,6 +109,7 @@ SRC_EXTRAS =	extras/ft_mtxfree.c			\
 				extras/ft_strpbrk.c			\
 				extras/ft_strqbrk.c			\
 				extras/ft_strint.c			\
+				extras/ft_map.c				\
 
 SRC =	$(SRC_PRINTF) $(SRC_CTYPE) $(SRC_STDLIB) $(SRC_STRING) $(SRC_NSTD) $(SRC_LL) $(SRC_EXTRAS) get_next_line/get_next_line.c
 

@@ -119,6 +119,7 @@ int					ft_strcspn(char *s, char *reject);
 int					ft_word_count(char const *s, char c);
 int					ft_strnfill(char *dest, char *src, int n);
 int					ft_countstr_mtx(char **matrix, char *str);
+int					ft_map(int old_value, int old_limits[2], int new_limits[2]);
 void				ft_mtxfree(char ***matrix);
 void				ft_strfree(char **str);
 void				ft_swaptr(void **p1, void **p2);
