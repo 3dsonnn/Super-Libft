@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:36:28 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/19 12:38:10 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/20 15:35:19 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,9 @@ typedef struct s_printf
 
 // FT_PRINTF
 int						ft_printf(const char *input, ...);
+
+// FT_DPRINTF
+int						ft_dprintf(int fd, const char *input, ...);
 
 // INIT
 void					init_printf(t_printf *ptf, const char *input, int fd);
