@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 01:02:24 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/19 15:22:38 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/20 07:52:23 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ int					ft_word_count(char const *s, char c);
 int					ft_strnfill(char *dest, char *src, int n);
 int					ft_countstr_mtx(char **matrix, char *str);
 int					ft_map(int old_value, int old_limits[2], int new_limits[2]);
+extern int			ft_empty_point(t_point point);
 void				ft_mtxfree(char ***matrix);
 void				ft_strfree(char **str);
 void				ft_swaptr(void **p1, void **p2);
@@ -136,5 +137,4 @@ char				**ft_lstmtx(t_list *lst);
 void				ft_join(char **new_str, char *str, char *buffer);
 char				**ft_realloc(char **matrix, char **tmp, int old_size,
 						int new_size);
-
 #endif
