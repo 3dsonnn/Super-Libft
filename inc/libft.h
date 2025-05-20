@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 01:02:24 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/20 07:52:23 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/20 15:25:54 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "printf.h"
 
 typedef struct s_list
 {
@@ -108,7 +109,6 @@ int					ft_getpid(void);
 int					ft_nbrlen(int n);
 int					ft_strnbr(char *str);
 int					ft_strint(char *str);
-int					ft_strspace(char *str);
 int					ft_mtxlen(char **matrix);
 int					ft_longestr_mtx(char **mtx);
 int					ft_strcmp(char *s1, char *s2);
@@ -119,8 +119,9 @@ int					ft_strcspn(char *s, char *reject);
 int					ft_word_count(char const *s, char c);
 int					ft_strnfill(char *dest, char *src, int n);
 int					ft_countstr_mtx(char **matrix, char *str);
+int					ft_str_case_cmp(char *s1, char *s2);
 int					ft_map(int old_value, int old_limits[2], int new_limits[2]);
-extern int			ft_empty_point(t_point point);
+extern int			ft_origin(t_point point);
 void				ft_mtxfree(char ***matrix);
 void				ft_strfree(char **str);
 void				ft_swaptr(void **p1, void **p2);
