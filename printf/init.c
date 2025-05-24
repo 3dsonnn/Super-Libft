@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 07:59:11 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/19 12:43:29 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/24 07:51:16 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,12 @@ static void	init_nbr_aux(t_nbr *nbr, t_integer n)
 
 int	init_nbr(t_nbr *nbr, t_integer n, char id)
 {
-	*nbr = (t_nbr){.str = NULL, .tmp = NULL, .aux = NULL, .id = id, .neg = 0,
-		.len = 0};
+	nbr->id = id;
+	nbr->neg = 0;
+	nbr->len = 0;
+	nbr->str = NULL;
+	nbr->tmp = NULL;
+	nbr->aux = NULL;
 	if (id == 'i')
 		init_nbr_aux(nbr, n);
 	else if (id == 'u')
@@ -61,8 +65,18 @@ void	init_format(t_printf *ptf)
 
 void	init_printf(t_printf *ptf, const char *input, int fd)
 {
-	*ptf = (t_printf){.input = (char *)input, .fd = fd, .size = 0,
-		.format = (t_format){.str = NULL, .start = NULL, .end = NULL,
-		.type = '\0', .hash = 0, .space = 0, .plus = 0, .zero = 0, .minus = 0,
-		.dot = -1, .width = -1}};
+	ptf->fd = fd;
+	ptf->size = 0;
+	ptf->input = (char *)input;
+	ptf->format.str = NULL;
+	ptf->format.start = NULL;
+	ptf->format.end = NULL;
+	ptf->format.type = '\0';
+	ptf->format.hash = 0;
+	ptf->format.space = 0;
+	ptf->format.plus = 0;
+	ptf->format.zero = 0;
+	ptf->format.minus = 0;
+	ptf->format.dot = -1;
+	ptf->format.width = -1;
 }
