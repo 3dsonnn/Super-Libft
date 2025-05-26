@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:36:28 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/20 15:35:19 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/25 19:06:56 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include <stdarg.h>
+# include <stddef.h>
 
 # define TYPE "cspdiuxX%"
 # define NBR "123456789"
