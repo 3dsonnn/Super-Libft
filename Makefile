@@ -6,7 +6,7 @@
 #    By: efinda <efinda@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 19:18:41 by efinda            #+#    #+#              #
-#    Updated: 2025/05/20 10:39:02 by efinda           ###   ########.fr        #
+#    Updated: 2025/05/25 18:18:29 by efinda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,8 @@ SRC_EXTRAS =	extras/ft_mtxfree.c			\
 				extras/ft_strqbrk.c			\
 				extras/ft_strint.c			\
 				extras/ft_map.c				\
-				extras/ft_origin.c			\
+				extras/ft_origin_point.c	\
+				extras/ft_negative_point.c	\
 				extras/ft_str_case_cmp.c	\
 
 SRC =	$(SRC_PRINTF) $(SRC_CTYPE) $(SRC_STDLIB) $(SRC_STRING) $(SRC_NSTD) $(SRC_LL) $(SRC_EXTRAS) get_next_line/get_next_line.c

@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 01:02:24 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/20 15:25:54 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/25 18:31:36 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@
 #  define FD_MAX 1024
 # endif
 
+# include "printf.h"
 # include <fcntl.h>
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "printf.h"
 
 typedef struct s_list
 {
@@ -121,7 +121,6 @@ int					ft_strnfill(char *dest, char *src, int n);
 int					ft_countstr_mtx(char **matrix, char *str);
 int					ft_str_case_cmp(char *s1, char *s2);
 int					ft_map(int old_value, int old_limits[2], int new_limits[2]);
-extern int			ft_origin(t_point point);
 void				ft_mtxfree(char ***matrix);
 void				ft_strfree(char **str);
 void				ft_swaptr(void **p1, void **p2);
@@ -138,4 +137,6 @@ char				**ft_lstmtx(t_list *lst);
 void				ft_join(char **new_str, char *str, char *buffer);
 char				**ft_realloc(char **matrix, char **tmp, int old_size,
 						int new_size);
+extern int			ft_origin_point(t_point point);
+extern int			ft_negative_point(t_point point, int flag);					
 #endif
