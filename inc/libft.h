@@ -6,7 +6,7 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 01:02:24 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/25 18:31:36 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/27 14:33:59 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+<<<<<<< HEAD
+=======
+# include <sys/time.h>
+>>>>>>> tmp
 
 typedef struct s_list
 {
@@ -138,5 +142,9 @@ void				ft_join(char **new_str, char *str, char *buffer);
 char				**ft_realloc(char **matrix, char **tmp, int old_size,
 						int new_size);
 extern int			ft_origin_point(t_point point);
-extern int			ft_negative_point(t_point point, int flag);					
+extern int			ft_negative_point(t_point point, int flag);
+extern t_point		ft_center_range(t_point big, t_point lil);
+unsigned long long	ft_gettimeofday(void);
+
+>>>>>>> tmp
 #endif
