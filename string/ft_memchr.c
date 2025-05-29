@@ -6,11 +6,11 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 22:11:31 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/16 13:31:10 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/29 21:05:27 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

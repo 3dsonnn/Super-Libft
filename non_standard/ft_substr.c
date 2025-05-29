@@ -6,11 +6,11 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 01:00:15 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/16 17:15:32 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/29 21:05:27 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

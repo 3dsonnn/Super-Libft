@@ -6,11 +6,11 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 20:57:28 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/19 11:56:21 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/29 21:05:27 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 static	char	*one_line(char *str)
 {

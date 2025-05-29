@@ -6,11 +6,11 @@
 /*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 21:18:24 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/19 14:33:45 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/29 21:05:27 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 static void	fill(char **tab, t_point size, t_point cur, char to_fill)
 {

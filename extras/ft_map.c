@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efinda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: efinda <efinda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:37:57 by efinda            #+#    #+#             */
-/*   Updated: 2025/05/19 17:38:25 by efinda           ###   ########.fr       */
+/*   Updated: 2025/05/29 21:05:27 by efinda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_map(int old_value, int old_limits[2], int new_limits[2])
 {

@@ -6,7 +6,7 @@
 #    By: efinda <efinda@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 19:18:41 by efinda            #+#    #+#              #
-#    Updated: 2025/05/27 14:33:22 by efinda           ###   ########.fr        #
+#    Updated: 2025/05/29 21:03:48 by efinda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,29 +118,43 @@ SRC_EXTRAS =	extras/ft_mtxfree.c			\
 
 SRC =	$(SRC_PRINTF) $(SRC_CTYPE) $(SRC_STDLIB) $(SRC_STRING) $(SRC_NSTD) $(SRC_LL) $(SRC_EXTRAS) get_next_line/get_next_line.c
 
+HEADERS	=	inc/libft.h					\
+			inc/printf.h				\
+			my_mlx/inc/my_mlx.h			\
+			my_mlx/inc/my_mlx_structs.h	\
+
+OBJ = $(SRC:.c=.o)
+
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -I./inc
 ARC = ar rc
 INDEX = ranlib
 RM = rm -f
 
-OBJ = $(SRC:.c=.o)
+MY_MLX_PATH = my_mlx
+MY_MLX = $(MY_MLX_PATH)/my_mlx.a
 
-%.o: %.c
-	@$(CC) $(FLAGS) -c $< -o $@
-
-all: $(NAME)
+all: $(NAME) $(MY_MLX)
 
 $(NAME): $(OBJ)
-	$(ARC) $(NAME) $(OBJ);
-	$(INDEX) $(NAME);
+	$(ARC) $(NAME) $(OBJ)
+	$(INDEX) $(NAME)
+
+$(MY_MLX): $(NAME)
+	@$(MAKE) -s -C $(MY_MLX_PATH)
+
+%.o: %.c $(HEADERS)
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJ)
+	@$(MAKE) -s -C $(MY_MLX_PATH) clean
 
 fclean: clean
 	@$(RM) $(NAME)
+	@$(MAKE) -s -C $(MY_MLX_PATH) fclean
 
 re: fclean all
+	@$(MAKE) -s -C $(MY_MLX_PATH) re
 
 .PHONY: all clean fclean re
