@@ -127,8 +127,7 @@ OBJ = $(SRC:.c=.o)
 
 CC = cc
 FLAGS = -Wall -Wextra -Werror -I./inc
-ARC = ar rc
-INDEX = ranlib
+ARC = ar rcs
 RM = rm -f
 
 MY_MLX_PATH = my_mlx
@@ -138,7 +137,6 @@ all: $(NAME) $(MY_MLX)
 
 $(NAME): $(OBJ)
 	$(ARC) $(NAME) $(OBJ)
-	$(INDEX) $(NAME)
 
 $(MY_MLX): $(NAME)
 	@$(MAKE) -s -C $(MY_MLX_PATH)
