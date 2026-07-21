@@ -217,8 +217,8 @@ Supported flags: `-` (left-justify), `0` (zero-pad), `+` / space (sign), `#` (al
 | Function | Description |
 |---|---|
 | `ft_gettimeofday(void)` | Current time in milliseconds since the epoch. |
-| `ft_swaptr(p1, p2)` | Intended to swap two pointers; **not yet functional** — currently only null-checks its arguments. |
-| `ft_getpid(void)` | Intended to return the calling process's PID; **not yet functional** — currently closes fd 0 and always returns `-1`. |
+| `ft_swaptr(p1, p2)` | Swaps the two pointers pointed to by `p1` and `p2`. |
+| `ft_getpid(void)` | Returns the calling process's PID, read from `/proc/self/stat`. |
 
 ### Macros & constants (`inc/libft.h`)
 
