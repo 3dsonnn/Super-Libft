@@ -6,127 +6,125 @@
 #    By: efinda <efinda@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 19:18:41 by efinda            #+#    #+#              #
-#    Updated: 2025/05/29 21:03:48 by efinda           ###   ########.fr        #
+#    Updated: 2026/07/27 07:22:10 by efinda           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC_PRINTF =	printf/ft_printf.c	\
-				printf/ft_dprintf.c	\
-				printf/aux.c		\
-				printf/char.c		\
-				printf/flags.c		\
-				printf/init.c		\
-				printf/integer.c	\
-				printf/no_type.c	\
-				printf/parse.c		\
-				printf/print.c		\
-				printf/read.c		\
-				printf/string.c		\
-				printf/type.c		\
-				printf/utils.c		\
+OBJS_PRINTF =	printf/ft_printf.o	\
+				printf/ft_dprintf.o	\
+				printf/aux.o		\
+				printf/char.o		\
+				printf/flags.o		\
+				printf/init.o		\
+				printf/integer.o	\
+				printf/no_type.o	\
+				printf/parse.o		\
+				printf/print.o		\
+				printf/read.o		\
+				printf/string.o		\
+				printf/type.o		\
+				printf/utils.o		\
 
-SRC_CTYPE =		ctype/ft_isalnum.c	\
-				ctype/ft_isalpha.c	\
-				ctype/ft_isascii.c	\
-				ctype/ft_isdigit.c	\
-				ctype/ft_isprint.c	\
-				ctype/ft_tolower.c	\
-				ctype/ft_toupper.c	\
-				ctype/ft_isupper.c	\
-				ctype/ft_islower.c	\
-				ctype/ft_isblank.c	\
-				ctype/ft_isspace.c	\
+OBJS_CTYPE =	ctype/ft_isalnum.o	\
+				ctype/ft_isalpha.o	\
+				ctype/ft_isascii.o	\
+				ctype/ft_isdigit.o	\
+				ctype/ft_isprint.o	\
+				ctype/ft_tolower.o	\
+				ctype/ft_toupper.o	\
+				ctype/ft_isupper.o	\
+				ctype/ft_islower.o	\
+				ctype/ft_isblank.o	\
+				ctype/ft_isspace.o	\
 
-SRC_STDLIB =	stdlib/ft_atoi.c 	\
-				stdlib/ft_calloc.c 	\
+OBJS_STDLIB =	stdlib/ft_atoi.o 	\
+				stdlib/ft_calloc.o 	\
 
-SRC_STRING =	string/ft_bzero.c	\
-				string/ft_memchr.c 	\
-				string/ft_memcmp.c 	\
-				string/ft_memcpy.c 	\
-				string/ft_memmove.c \
-				string/ft_memset.c 	\
-				string/ft_strchr.c 	\
-				string/ft_strdup.c 	\
-				string/ft_strlcat.c \
-				string/ft_strlcpy.c \
-				string/ft_strlen.c 	\
-				string/ft_strncmp.c \
-				string/ft_strnstr.c \
-				string/ft_strrchr.c \
+OBJS_STRING =	string/ft_bzero.o	\
+				string/ft_memchr.o 	\
+				string/ft_memcmp.o 	\
+				string/ft_memcpy.o 	\
+				string/ft_memmove.o \
+				string/ft_memset.o 	\
+				string/ft_strchr.o 	\
+				string/ft_strdup.o 	\
+				string/ft_strlcat.o \
+				string/ft_strlcpy.o \
+				string/ft_strlen.o 	\
+				string/ft_strncmp.o \
+				string/ft_strnstr.o \
+				string/ft_strrchr.o \
 
-SRC_NSTD =	non_standard/ft_itoa.c			\
-			non_standard/ft_substr.c		\
-			non_standard/ft_putchar_fd.c	\
-			non_standard/ft_putendl_fd.c	\
-			non_standard/ft_putnbr_fd.c		\
-			non_standard/ft_putstr_fd.c		\
-			non_standard/ft_split.c 		\
-			non_standard/ft_striteri.c		\
-			non_standard/ft_strmapi.c		\
-			non_standard/ft_strtrim.c		\
+OBJS_NSTD =	non_standard/ft_itoa.o			\
+			non_standard/ft_substr.o		\
+			non_standard/ft_putchar_fd.o	\
+			non_standard/ft_putendl_fd.o	\
+			non_standard/ft_putnbr_fd.o		\
+			non_standard/ft_putstr_fd.o		\
+			non_standard/ft_split.o 		\
+			non_standard/ft_striteri.o		\
+			non_standard/ft_strmapi.o		\
+			non_standard/ft_strtrim.o		\
 
-SRC_LL =	linked_list/del.c				\
-			linked_list/ft_lstadd_back.c 	\
-			linked_list/ft_lstadd_front.c 	\
-			linked_list/ft_lstclear.c 		\
-			linked_list/ft_lstdelone.c 		\
-			linked_list/ft_lstiter.c 		\
-			linked_list/ft_lstlast.c 		\
-			linked_list/ft_lstmap.c			\
-			linked_list/ft_lstnew.c 		\
-			linked_list/ft_lstsize.c 		\
+OBJS_LL =	linked_list/del.o				\
+			linked_list/ft_lstadd_back.o 	\
+			linked_list/ft_lstadd_front.o 	\
+			linked_list/ft_lstclear.o 		\
+			linked_list/ft_lstdelone.o 		\
+			linked_list/ft_lstiter.o 		\
+			linked_list/ft_lstlast.o 		\
+			linked_list/ft_lstmap.o			\
+			linked_list/ft_lstnew.o 		\
+			linked_list/ft_lstsize.o 		\
 
-SRC_EXTRAS =	extras/ft_mtxfree.c			\
-				extras/ft_mtxlen.c			\
-				extras/ft_strcmp.c			\
-				extras/ft_strfree.c			\
-				extras/ft_strnfill.c		\
-				extras/ft_strcpy.c			\
-				extras/ft_mtxdup.c			\
-				extras/ft_addstr_mtx.c		\
-				extras/ft_strndup.c			\
-				extras/ft_countstr_mtx.c	\
-				extras/ft_strjoin.c			\
-				extras/ft_lstmtx.c			\
-				extras/ft_join.c			\
-				extras/ft_nbrlen.c			\
-				extras/ft_realloc.c			\
-				extras/ft_strnbr.c			\
-				extras/ft_strspn.c			\
-				extras/ft_strspn_rev.c		\
-				extras/ft_strcspn.c			\
-				extras/ft_atoll.c			\
-				extras/ft_getpid.c			\
-				extras/ft_strchr_count.c	\
-				extras/ft_swaptr.c			\
-				extras/ft_word_count.c		\
-				extras/ft_longestr_mtx.c	\
-				extras/ft_flood_fill.c		\
-				extras/ft_replace_char.c	\
-				extras/ft_strpbrk.c			\
-				extras/ft_strqbrk.c			\
-				extras/ft_strint.c			\
-				extras/ft_map.c				\
-				extras/ft_origin_point.c	\
-				extras/ft_negative_point.c	\
-				extras/ft_str_case_cmp.c	\
-				extras/ft_center_range.c	\
-				extras/ft_gettimeofday.c	\
+OBJS_EXTRAS =	extras/ft_mtxfree.o			\
+				extras/ft_mtxlen.o			\
+				extras/ft_strcmp.o			\
+				extras/ft_strfree.o			\
+				extras/ft_strnfill.o		\
+				extras/ft_strcpy.o			\
+				extras/ft_mtxdup.o			\
+				extras/ft_addstr_mtx.o		\
+				extras/ft_strndup.o			\
+				extras/ft_countstr_mtx.o	\
+				extras/ft_strjoin.o			\
+				extras/ft_lstmtx.o			\
+				extras/ft_join.o			\
+				extras/ft_nbrlen.o			\
+				extras/ft_realloc.o			\
+				extras/ft_strnbr.o			\
+				extras/ft_strspn.o			\
+				extras/ft_strspn_rev.o		\
+				extras/ft_strcspn.o			\
+				extras/ft_atoll.o			\
+				extras/ft_getpid.o			\
+				extras/ft_strchr_count.o	\
+				extras/ft_swaptr.o			\
+				extras/ft_word_count.o		\
+				extras/ft_longestr_mtx.o	\
+				extras/ft_flood_fill.o		\
+				extras/ft_replace_char.o	\
+				extras/ft_strpbrk.o			\
+				extras/ft_strqbrk.o			\
+				extras/ft_strint.o			\
+				extras/ft_map.o				\
+				extras/ft_origin_point.o	\
+				extras/ft_negative_point.o	\
+				extras/ft_str_case_cmp.o	\
+				extras/ft_center_range.o	\
+				extras/ft_gettimeofday.o	\
 
-SRC =	$(SRC_PRINTF) $(SRC_CTYPE) $(SRC_STDLIB) $(SRC_STRING) $(SRC_NSTD) $(SRC_LL) $(SRC_EXTRAS) get_next_line/get_next_line.c
+OBJS =	$(OBJS_PRINTF) $(OBJS_CTYPE) $(OBJS_STDLIB) $(OBJS_STRING) $(OBJS_NSTD) $(OBJS_LL) $(OBJS_EXTRAS) get_next_line/get_next_line.o
 
 HEADERS	=	inc/libft.h					\
 			inc/printf.h				\
 			my_mlx/inc/my_mlx.h			\
 			my_mlx/inc/my_mlx_structs.h	\
 
-OBJ = $(SRC:.c=.o)
-
 CC = cc
-FLAGS = -Wall -Wextra -Werror -I./inc
+CFLAGS = -Wall -Wextra -Werror -I./inc -fPIC
 ARC = ar rcs
 RM = rm -f
 
@@ -135,17 +133,16 @@ MY_MLX = $(MY_MLX_PATH)/my_mlx.a
 
 all: $(NAME) $(MY_MLX)
 
-$(NAME): $(OBJ)
-	$(ARC) $(NAME) $(OBJ)
+$(OBJS): $(HEADERS)
+
+$(NAME): $(OBJS)
+	$(ARC) $(NAME) $(OBJS)
 
 $(MY_MLX): $(NAME)
 	@$(MAKE) -s -C $(MY_MLX_PATH)
 
-%.o: %.c $(HEADERS)
-	$(CC) $(FLAGS) -c $< -o $@
-
 clean:
-	@$(RM) $(OBJ)
+	@$(RM) $(OBJS)
 	@$(MAKE) -s -C $(MY_MLX_PATH) clean
 
 fclean: clean
