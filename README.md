@@ -4,28 +4,20 @@ A from-scratch C standard library, built on top of the 42 School Libft project (
 
 It also bundles [`my_mlx`](https://github.com/3dsonnn/my_mlx) as a git submodule — a small MinilibX helper layer — so graphical projects (`fdf`, `so_long`, `cub3d`, `fract-ol`, ...) get both the C library and the MLX layer from a single clone.
 
-## Why use it
-
-- **The full mandatory + bonus Libft**, reimplemented and norm-compliant: every `ctype`/`string`/`stdlib` function the subject requires, plus the doubly-linked `t_list` operations and the bonus string helpers (`ft_split`, `ft_itoa`, `ft_substr`, `ft_strtrim`, ...).
-- **A built-in `ft_printf` / `ft_dprintf`** supporting the common conversions (`%c %s %p %d %i %u %x %X %%`) and flags (`-`, `0`, `+`, space, `#`, width, `.precision`) — no separate printf submodule needed.
-- **A multi-fd `get_next_line`**, tracking up to `FD_MAX` (default `1024`) file descriptors independently with a configurable `BUFFER_SIZE` (default `42`), so reading several files or sockets at once just works.
-- **A large `extras/` layer beyond the subject**: `char **` matrix helpers (dup, free, join, count, longest string), string helpers not in the subject (`ft_strcmp`, `ft_strjoin`, `ft_strspn`/`ft_strcspn`, `ft_word_count`, ...), and small coordinate/grid helpers (`t_point`, `ft_center_range`, `flood_fill`, `ft_map`) aimed at grid- and MLX-based projects.
-- **`-Wall -Wextra -Werror` clean throughout**, and built without `ranlib` — the Makefile uses `ar rcs` to write the archive index directly, since the 42 Libft subject forbids `ranlib`.
-
 ## Repository layout
 
 ```
 .
 ├── ctype/           # character classification & conversion (ft_isalpha, ft_toupper, ...)
-├── string/          # memory & string primitives (ft_memcpy, ft_strlcpy, ...)
-├── stdlib/          # ft_atoi, ft_calloc
-├── linked_list/     # t_list: create, add, iterate, map, clear
-├── non_standard/    # bonus part: ft_split, ft_itoa, ft_substr, fd writers, ...
-├── get_next_line/   # get_next_line, multi-fd, configurable BUFFER_SIZE
-├── printf/          # ft_printf / ft_dprintf implementation
 ├── extras/          # everything beyond the subject: string/matrix/point helpers, ...
+├── get_next_line/   # get_next_line, multi-fd, configurable BUFFER_SIZE
 ├── inc/             # public headers (libft.h, printf.h)
+├── linked_list/     # t_list: create, add, iterate, map, clear
 ├── my_mlx/          # MLX graphics helper library, as a git submodule
+├── non_standard/    # bonus part: ft_split, ft_itoa, ft_substr, fd writers, ...
+├── printf/          # ft_printf / ft_dprintf implementation
+├── stdlib/          # ft_atoi, ft_calloc
+├── string/          # memory & string primitives (ft_memcpy, ft_strlcpy, ...)
 └── Makefile         # builds libft.a, then my_mlx's libmymlx.a
 ```
 
