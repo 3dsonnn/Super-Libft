@@ -4,6 +4,29 @@ A from-scratch C standard library, built on top of the 42 School Libft project (
 
 It also bundles [`my_mlx`](https://github.com/3dsonnn/my_mlx) as a git submodule — a small MinilibX helper layer — so graphical projects (`fdf`, `so_long`, `cub3d`, `fract-ol`, ...) get both the C library and the MLX layer from a single clone.
 
+# Contents
+ 
+- [Repository layout](#repository-layout)
+- [Clone](#clone)
+- [Build](#build)
+- [Using it in another project](#using-it-in-another-project)
+- [Data types (`inc/libft.h`)](#data-types-inclibfth)
+- [API reference](#api-reference)
+  * [ctype](#ctype)
+  * [string](#string)
+  * [stdlib](#stdlib)
+  * [linked_list](#linked_list)
+  * [non_standard (bonus part)](#non_standard-bonus-part)
+  * [get_next_line](#get_next_line)
+  * [printf](#printf)
+  * [extras — string utilities](#extras--string-utilities)
+  * [extras — matrices (`char **`)](#extras--matrices-char-)
+  * [extras — points & grids (`t_point`)](#extras--points--grids-t_point)
+  * [extras — numbers & validation](#extras--numbers--validation)
+  * [extras — misc](#extras--misc)
+  * [Macros & constants (`inc/libft.h`)](#macros--constants-inclibfth)
+- [Example](#example)
+
 ## Repository layout
 
 ```
